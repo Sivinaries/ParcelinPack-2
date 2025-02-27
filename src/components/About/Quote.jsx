@@ -5,7 +5,7 @@ function QuoteSection() {
   return (
     <div className="mx-auto p-4 md:p-12">
       <div className="relative rounded-lg flex items-center justify-center">
-        <div className="flex flex-col justify-center p-4 md:p-12 min-h-[300px] md:min-h-[400px] z-10">
+        <div className="flex flex-col justify-center p-4 md:p-12 min-h-[200px] md:min-h-[400px] z-10">
           <div className="w-full md:w-[700px] relative">
             <RiDoubleQuotesL
               color="#D4B4A2"

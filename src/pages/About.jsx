@@ -8,6 +8,7 @@ import Story from "../components/About/Story";
 import Team from "../components/About/Team";
 import QuoteSection from "../components/About/Quote";
 import Footer from "../components/Footer";
+import Campaign from "../components/Home/Campaign";
 
 function About() {
   return (
@@ -18,6 +19,9 @@ function About() {
         <Story />
         <QuoteSection />
         <Exp />
+        <div className="md:hidden">
+          <Campaign />
+        </div>
         <Team />
         <Why />
         <Pelanggan />
