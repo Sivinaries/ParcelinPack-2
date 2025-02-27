@@ -7,7 +7,7 @@ function Exp() {
     <div className="grid grid-cols-1 h-full bg-white">
       <div className="my-2 md:my-0 space-y-8 md:space-y-12">
         <div className="mx-4 md:mx-20">
-          <div className="flex flex-col md:flex-row md:justify-between gap-4 md:gap-6">
+          <div className="flex flex-col md:flex-row md:justify-between gap-2">
             <div className="w-full md:w-1/2">
               <div
                 className="space-y-2 md:space-y-10 rounded-xl bg-cover bg-center h-64 md:h-80 flex flex-col justify-around md:justify-start px-8 text-white relative"
@@ -45,7 +45,7 @@ function Exp() {
               </div>
             </div>
           </div>
-          <div className="w-full mt-4 md:mt-8">
+          <div className="w-full mt-2 ">
             <div
               className="space-y-2 md:space-y-10 rounded-xl bg-cover bg-center h-64 md:h-80 flex flex-col justify-around md:justify-start px-8 text-white relative"
               style={{ backgroundImage: `url(${exp3})` }}

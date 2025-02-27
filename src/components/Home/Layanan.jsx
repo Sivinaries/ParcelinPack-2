@@ -26,7 +26,7 @@ function Layanan() {
 
   return (
     <div className="grid grid-cols-1 h-fit bg-white">
-      <div className="my-10 space-y-3 md:space-y-6">
+      <div className="my-8 md:my-20 space-y-3 md:space-y-6">
         <div className="mx-4 md:mx-16">
           <h1 className="text-3xl md:text-5xl font-light">Layanan Kami</h1>
         </div>

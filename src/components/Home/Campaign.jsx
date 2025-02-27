@@ -27,9 +27,9 @@ export default function Campaign() {
   };
 
   return (
-    <div className="h-2/4 md:h-screen w-full p-2 md:px-16 md:py-24">
+    <div className="h-2/4 md:h-screen w-full p-2 md:px-16 my-6 md:py-24">
       <div
-        className="grid place-items-center h-full w-full bg-cover bg-center rounded-xl relative"
+        className="grid place-items-center h-full w-full bg-cover bg-center rounded-xl relative shadow-xl"
         style={{
           backgroundImage: `url('${background}')`,
           backgroundSize: "cover",

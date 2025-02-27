@@ -78,7 +78,7 @@ export default function Why() {
   };
 
   return (
-    <div className="bg-white py-10 mx-4 md:mx-16 relative">
+    <div className="bg-white md:py-20 mx-4 md:mx-16 relative">
       <div className="mb-10">
         <h1 className="text-3xl md:text-5xl font-light text-black">
           Kenapa Parcelinpack

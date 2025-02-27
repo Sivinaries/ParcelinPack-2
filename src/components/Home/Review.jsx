@@ -17,8 +17,8 @@ export default function Review() {
   ];
 
   return (
-    <div className="grid place-items-center h-full bg-[#FEF7EE] rounded-xl overflow-hidden">
-      <div className="text-center space-y-3 md:space-y-6 my-10 md:my-36 lg:my-10">
+    <div className="grid place-items-center h-full bg-[#FEF7EE] rounded-[50px] overflow-hidden">
+      <div className="text-center space-y-3 md:space-y-6 my-4">
         <h1 className="text-3xl">Apa Kata Mereka</h1>
         <p className="p-2 md:p-0 font-extralight text-base">
           Yuk, lihat apa kata mereka yang telah memilih Parcelinpack sebagai
@@ -26,7 +26,7 @@ export default function Review() {
         </p>
         <div className="flex justify-center">
           <video
-            className="rounded-lg w-64 md:w-96 aspect-video"
+            className="rounded-xl border shadow-sm w-3/4 md:w-1/3 aspect-video"
             controls
             autoPlay
           >
