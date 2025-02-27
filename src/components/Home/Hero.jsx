@@ -2,6 +2,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import './custom-navigation.css';
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 function Hero() {
   const slides = [
@@ -97,7 +99,10 @@ function Hero() {
     <div className="w-full h-screen overflow-hidden relative">
       <Swiper
         modules={[Navigation, Autoplay]}
-        navigation
+        navigation={{
+          nextEl: '.custom-swiper-button-next',
+          prevEl: '.custom-swiper-button-prev',
+        }}
         autoplay={{ delay: 10000, disableOnInteraction: false }}
         loop
         className="w-full h-full"
@@ -124,6 +129,12 @@ function Hero() {
             </div>
           </SwiperSlide>
         ))}
+        <div className="custom-swiper-button-prev">
+          <FaArrowLeft />
+        </div>
+        <div className="custom-swiper-button-next">
+          <FaArrowRight />
+        </div>
       </Swiper>
     </div>
   );

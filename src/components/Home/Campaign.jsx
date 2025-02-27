@@ -27,7 +27,7 @@ export default function Campaign() {
   };
 
   return (
-    <div className="h-2/4 md:h-screen w-full p-2 md:px-10 md:py-24">
+    <div className="h-2/4 md:h-screen w-full p-2 md:px-16 md:py-24">
       <div
         className="grid place-items-center h-full w-full bg-cover bg-center rounded-xl relative"
         style={{

@@ -32,16 +32,13 @@ function Faq() {
   };
 
   return (
-    <div className="grid grid-cols-1 h-full bg-white w-full">
-      <div className="my-10">
+    <div className="grid grid-cols-1 h-full bg-white w-full md:mx-6">
+      <div className="md:my-10">
         <div className="grid grid-cols-1 md:grid-cols-2 m-4 md:my-20 md:mx-10 md:space-x-8">
           <div className="flex items-center col-span-1">
-            <div className="space-y-4">
+            <div className="space-y-410">
               <h1 className="text-3xl md:text-4xl">
-                Dapatkan Packaging Terbaik
-              </h1>
-              <h1 className="text-3xl md:text-4xl">
-                untuk Bisnismu!
+                Dapatkan Packaging Terbaik untuk Bisnismu!
               </h1>
               <p>
                 Dapatkan packaging terbaik untuk bisnismu! Dengan desain menarik
@@ -50,9 +47,9 @@ function Faq() {
               </p>
             </div>
           </div>
-          <div className="col-span-1 grid grid-cols-1">
+          <div className="col-span-1 grid grid-cols-1 my-4 md:my-0">
             {faqData.map((faq, index) => (
-              <div key={index} className="border-b border-gray-200">
+              <div key={index} className={`border-t border-gray-800`}>
                 <button
                   className="w-full py-5 flex justify-between items-center hover:text-gray-700 focus:outline-none"
                   onClick={() => toggleAccordion(index)}
@@ -68,8 +65,9 @@ function Faq() {
                 </button>
 
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? "max-h-40 pb-5" : "max-h-0"
-                    }`}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    openIndex === index ? "max-h-40 pb-5" : "max-h-0"
+                  }`}
                 >
                   <p className="text-gray-600">{faq.answer}</p>
                 </div>

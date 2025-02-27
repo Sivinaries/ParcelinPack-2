@@ -2,9 +2,9 @@ import pack from "../../assets/images/pack/pack.png"
 
 function Parcel() {
   return (
-    <div className="relative grid grid-cols-1 h-fit bg-white md:px-20">
+    <div className="relative grid grid-cols-1 h-fit bg-white md:px-16">
       <div className="my-0 md:my-10 space-y-3 md:space-y-6">
-        <h1 className="ps-0 md:ps-8 text-3xl md:text-5xl font-light text-gray-300">
+        <h1 className="ps-2 md:ps-6 text-3xl md:text-5xl font-light text-gray-300">
           Creative Packaging Company
         </h1>
       </div>

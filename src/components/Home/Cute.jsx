@@ -2,9 +2,9 @@ import cute from '../../assets/images/cute.png'
 
 function Cute() {
     return (
-        <div className='grid grid-cols-1 h-screen bg-white'>
-            <div className='my-auto grid md:grid-cols-2'>
-                <div className='md:w-3/4 mx-4 md:mx-auto space-y-4 my-auto order-2 md:order-none'>
+        <div className='grid grid-cols-1 h-fit md:h-screen bg-white px-4'>
+            <div className='md:my-auto my-4 grid md:grid-cols-2'>
+                <div className='md:w-5/6 md:mx-auto space-y-4 my-auto order-2 md:order-none'>
                     <div>
                         <h1 className='text-xl md:text-2xl'
                             style={{ textAlign: "justify" }}
