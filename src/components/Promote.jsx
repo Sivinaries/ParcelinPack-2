@@ -25,7 +25,7 @@ export default function Promote() {
             <h1 className="text-4xl text-white font-medium">
               Tunggu apalagi, Yuk hubungi kami sekarang!
             </h1>
-            <button className="bg-[#FD9F59] text-2xl text-white font-extrabold rounded-full p-4">
+            <button className="bg-[#FD9F59] text-2xl text-white font-extrabold rounded-full p-4 w-1/3">
               Hubungi Kami
             </button>
           </div>
@@ -50,7 +50,7 @@ export default function Promote() {
           <h1 className="text-2xl text-white font-bold">
             kami sekarang!
           </h1>
-          <button className="bg-[#FD9F59] text-2xl text-white font-extrabold rounded-full p-4 mt-4">
+          <button className="bg-[#FD9F59] text-xl text-white font-extrabold rounded-full p-2.5 mt-4 w-1/2">
             Hubungi Kami
           </button>
         </Section>
