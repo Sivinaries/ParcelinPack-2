@@ -16,7 +16,7 @@ Section.propTypes = {
 
 export default function Promote() {
   return (
-    <div className="relative grid place-items-center h-full w-full px-4 my-4">
+    <div className="relative grid place-items-center h-full w-full px-4 my-28">
       <div className="hidden md:grid relative w-full grid-cols-5">
         <img src={"/images/promote/bg-vector.png"} alt="Wood Texture" className="absolute h-full object-fill w-full z-10" />
         <Section className="rounded-l-xl" />
