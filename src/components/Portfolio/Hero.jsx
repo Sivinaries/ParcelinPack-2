@@ -1,4 +1,4 @@
-import background from "../../assets/images/service/hero.png";
+import background from "/images/hero/hero1.png";
 
 function Hero() {
   return (

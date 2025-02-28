@@ -5,10 +5,10 @@ import { FaTiktok } from "react-icons/fa";
 
 function Hubungi() {
     return (
-        <div className="grid grid-cols-1 h-full md:h-screen bg-white p-2">
-            <div className="my-4 md:my-auto mx-4 md:mx-20">
+        <div className="grid grid-cols-1 h-full bg-white p-2">
+            <div className="my-4 md:my-14 mx-4 md:mx-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div className="bg-gray-100 p-4 rounded-xl space-y-4 my-auto">
+                    <div className="bg-gray-100 p-4 rounded-xl space-y-2 my-auto h-fit">
                         <div>
                             <h1 className="text-2xl md:text-2xl font-extralight">Hubungi Kami</h1>
                         </div>

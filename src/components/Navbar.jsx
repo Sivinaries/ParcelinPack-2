@@ -1,30 +1,24 @@
 import { useState, useEffect, useMemo } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '../assets/images/logo.png';
 import { Link } from 'react-router-dom';
+import { BsX } from "react-icons/bs";
+import { FaBars } from 'react-icons/fa';
 
 export default function Navbar () {
     const [showModal, setShowModal] = useState(false);
     const [isMobileView, setIsMobileView] = useState(false);
     const [activePage, setActivePage] = useState(null);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
-    const [isScrollingUp, setIsScrollingUp] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
 
-    const navLinks = useMemo(() => {
-        const baseLinks = [
-            { title: 'Beranda', to: '/' },
-            { title: 'Tentang Kami', to: '/about' },
-            { title: 'Layanan Kami', to: '/service' },
-            { title: 'Kemasan Produk', to: '/product' },
-            { title: 'Portofolio', to: '/portfolio' },
-        ];
-        
-        return isMobileView 
-            ? [...baseLinks, { title: 'Hubungi Kami', to: '/contact' }]
-            : baseLinks;
-    }, [isMobileView]);
+    const navLinks = useMemo(() => [
+        { title: 'Beranda', to: '/' },
+        { title: 'Tentang Kami', to: '/about' },
+        { title: 'Layanan Kami', to: '/service' },
+        { title: 'Kemasan Produk', to: '/product' },
+        { title: 'Portofolio', to: '/portfolio' },
+    ], []);
 
     useEffect(() => {
         const handleResize = () => {
@@ -42,7 +36,6 @@ export default function Navbar () {
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.scrollY;
-            setIsScrollingUp(currentScrollPos < prevScrollPos);
             setIsVisible(currentScrollPos <= prevScrollPos || currentScrollPos < 100);
             setPrevScrollPos(currentScrollPos);
         };
@@ -142,7 +135,7 @@ export default function Navbar () {
         <AnimatePresence>
             {isVisible && (
                 <motion.nav 
-                    className={`shadow-xl z-50 fixed top-0 right-0 left-0 p-2 ${isScrollingUp ? 'bg-white' : 'bg-transparent'}`}
+                    className="shadow-xl z-50 fixed top-0 right-0 left-0 p-2 bg-white"
                     variants={navLinksVariants}
                 >
                     <div className="flex justify-between items-center">
@@ -153,43 +146,48 @@ export default function Navbar () {
                                     src={logo} 
                                     alt="Logo Parcelin" 
                                 />
-                                <div className='ml-2 sm:ml-3'>
-                                    <p className='text-black text-left text-lg sm:text-base lg:text-xl xl:text-2xl font-bold'>
-                                        Parcelin Company
-                                    </p>
-                                </div>
+                                {!isMobileView && (
+                                    <div className='ml-2 sm:ml-3'>
+                                        <p className='text-black text-left text-lg sm:text-base lg:text-xl xl:text-2xl font-bold'>
+                                            Parcelin Company
+                                        </p>
+                                    </div>
+                                )}
                             </Link>
                         </div>
-                        
-                        {isMobileView ? (
-                            <button className="text-black">
-                                {showModal ? (
-                                    <FaTimes 
-                                        onClick={toggleModal} 
-                                        className="w-8 h-8" 
-                                    />
-                                ) : (
-                                    <FaBars 
-                                        onClick={toggleModal} 
-                                        className="w-8 h-8" 
-                                    />
-                                )}
-                            </button>
-                        ) : (
-                            <div className="hidden lg:flex gap-4 xl:gap-8 items-center">
-                                {navLinks.map((link, index) => (
-                                    <Link 
-                                        key={index} 
-                                        to={link.to} 
-                                        className={`text-black text-sm lg:text-base xl:text-lg font-semibold hover:scale-110 duration-200 delay-150 ${
-                                            activePage?.to === link.to ? 'border-b-2 border-black' : ''
-                                        }`}
-                                    >
-                                        {link.title}
-                                    </Link>
-                                ))}
-                            </div>
-                        )}
+
+                        <div className='flex gap-x-2'>
+                            {isMobileView && (
+                                <Link to="/contact" className='border border-black p-2 rounded-full'>Hubungi Kami</Link>
+                            )}
+                            
+                            {isMobileView ? (
+                                <button className="text-black">
+                                    {showModal ? (
+                                        <BsX size={42} onClick={toggleModal} />
+                                    ) : (
+                                        <FaBars 
+                                            onClick={toggleModal} 
+                                            className="w-8 h-8" 
+                                        />
+                                    )}
+                                </button>
+                            ) : (
+                                <div className="hidden lg:flex gap-4 xl:gap-8 items-center">
+                                    {navLinks.map((link, index) => (
+                                        <Link 
+                                            key={index} 
+                                            to={link.to} 
+                                            className={`text-black text-sm lg:text-base xl:text-lg font-semibold hover:scale-110 duration-200 delay-150 ${
+                                                activePage?.to === link.to ? 'border-b-2 border-black' : ''
+                                            }`}
+                                        >
+                                            {link.title}
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
                         
                         {!isMobileView && contactButton}
                     </div>
@@ -197,32 +195,34 @@ export default function Navbar () {
                     <AnimatePresence>
                         {showModal && isMobileView && (
                             <motion.div
-                                className="fixed inset-0 flex justify-center items-center bg-white"
+                                className="top-16 fixed inset-0 flex flex-col items-center"
                                 variants={modalVariants}
                                 initial="hidden"
                                 animate="visible"
                                 exit="exit"
                             >
-                                <FaTimes
-                                    className="absolute top-4 right-2 text-black cursor-pointer w-8 h-8"
-                                    onClick={toggleModal}
-                                />
+                                {/* <div className="flex justify-between w-full p-4 bg-white">
+                                    <img src="/images/logo.png" alt="" className='h-8 w-8' />
+                                    <div className="flex items-center gap-x-2">
+                                        <BsX size={42} onClick={toggleModal} />
+                                    </div>
+                                </div> */}
                                 <motion.div
-                                    className="relative w-full"
+                                    className="relative h-full w-full py-4 px-2 bg-white opacity-80"
                                     variants={navLinksVariants}
                                     initial="hidden"
                                     animate="visible"
                                     exit="exit"
                                 >
-                                    <div className="flex flex-col gap-6 sm:gap-8 justify-center mx-6 h-full text-left">
+                                    <div className="flex flex-col gap-6 sm:gap-8 h-full text-left">
                                         {navLinks.map((link, index) => (
                                             <motion.span 
                                                 key={index} 
-                                                className="text-black text-3xl font-bold"
+                                                className="text-black text-2xl"
                                                 variants={linkItemVariants}
                                                 onClick={closeModal}
                                             >
-                                                <Link to={link.to}>
+                                                <Link to={link.to} className='hover:underline hover:underline-offset-8'>
                                                     {link.title}
                                                 </Link>
                                             </motion.span>
