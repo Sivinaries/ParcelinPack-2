@@ -2,18 +2,16 @@ import background from "../../assets/images/service/hero.png";
 
 function Hero() {
   return (
-    <div className="relative bg-gray-900 text-white w-full h-screen sm:h-[400px] md:h-[500px] lg:h-[700px] overflow-hidden">
-      <div className="absolute inset-0">
-        <img
-          src={background}
-          alt="Hero Background"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-      </div>
+    <div className="relative w-full h-[600px] md:h-[500px] overflow-hidden">
+      <img
+        src={background}
+        alt="Hero Background"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
 
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
-      <div className="relative h-full z-10 p-4 xl:p-8">
+      <div className="relative z-10 h-full p-4 xl:p-8 my-4 md:my-8 text-white">
         <h1 className="text-4xl md:text-6xl font-bold absolute bottom-96 md:bottom-44">Kemasan Produk</h1>
         <p className='bottom-20 w-3/4 absolute'>
           Kami menawarkan berbagai layanan untuk memenuhi kebutuhan packaging
