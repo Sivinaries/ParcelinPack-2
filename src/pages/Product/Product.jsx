@@ -1,15 +1,28 @@
 import { useState } from "react";
 import Searchbar from "../../components/Product/Searchbar";
-import products from "../../data/products";
 import Hero from "../../components/Product/Hero";
 import Card from "../../components/Card";
+import useProduct from "../../hooks/useProduct";
 
 export default function Product() {
   const [searchTerm, setSearchTerm] = useState("");
+  const { products, error, loading } = useProduct()
 
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredProducts = products?.filter((product) =>
+    product.product.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  if (loading) {
+    return <p className="text-center text-gray-600">Loading...</p>;
+  }
+
+  if (error) {
+    return <p className="text-center text-red-500">Error: {error}</p>;
+  }
+
+  if (!products || products.length === 0) {
+    return <p className="text-center text-gray-500">Tidak ada product tersedia.</p>;
+  }
 
   return (
     <>
@@ -22,10 +35,10 @@ export default function Product() {
           {filteredProducts.map((product, index) => (
             <Card
               key={index}
-              img={`/images/product/${product.img}`}
-              name={product.name}
-              tags={product.tags}
-              slug={product.slug}
+              img={`/images/${product.img}`}
+              name={product.product}
+              tags={[]}
+              slug={product.id}
             />
           ))}
         </div>
