@@ -2,7 +2,7 @@ import background from "/images/hero/hero1.png";
 
 function Hero() {
   return (
-    <div className="relative w-full h-[600px] md:h-[500px] overflow-hidden">
+    <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
         <img
           src={background}
           alt="Hero Background"
