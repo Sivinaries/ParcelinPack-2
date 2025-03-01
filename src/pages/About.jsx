@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Whatsapp from '../components/Whatsapp'
 import Pelanggan from "../components/Home/Pelanggan";
 import Exp from "../components/Home/Exp";
 import Why from "../components/Home/Why";
@@ -9,23 +10,49 @@ import Team from "../components/About/Team";
 import QuoteSection from "../components/About/Quote";
 import Footer from "../components/Footer";
 import Campaign from "../components/Home/Campaign";
+import { motion } from "framer-motion";
 
 function About() {
+
+  const MotionSlideUp = {
+    initial: { y: 50, opacity: 0 },
+    whileInView: { y: 0, opacity: 1 },
+    transition: { duration: 2.5, ease: "easeInOut" },
+    viewport: { once: true },
+  };
+
   return (
     <main className="flex flex-col">
       <Navbar />
       <div className="w-full mx-auto">
         <Hero />
-        <Story />
-        <QuoteSection />
-        <Exp />
-        <div className="md:hidden">
-          <Campaign />
-        </div>
-        <Team />
-        <Why />
-        <Pelanggan />
-        <Promote />
+        <Whatsapp />
+        <motion.div {...MotionSlideUp}>
+          <Story />
+        </motion.div>
+        <motion.div {...MotionSlideUp}>
+          <QuoteSection />
+        </motion.div>
+        <motion.div {...MotionSlideUp}>
+          <Exp />
+        </motion.div>
+        <motion.div {...MotionSlideUp}>
+          <div className="md:hidden">
+            <Campaign />
+          </div>
+        </motion.div>
+        <motion.div {...MotionSlideUp}>
+          <Team />
+        </motion.div>
+        <motion.div {...MotionSlideUp}>
+          <Why />
+        </motion.div>
+        <motion.div {...MotionSlideUp}>
+          <Pelanggan />
+        </motion.div>
+        <motion.div {...MotionSlideUp}>
+          <Promote />
+        </motion.div>
       </div>
       <Footer />
     </main>

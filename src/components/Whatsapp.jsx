@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import wa from '../assets/images/wa.png';
+import { FaWhatsapp } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa6";
 
 function Whatsapp() {
@@ -9,16 +9,16 @@ function Whatsapp() {
 
   return (
     <>
-      <div className="z-50 fixed bottom-8 left-6 opacity-85 shadow-blue-500 hover:opacity-100">
+      <div className="z-50 fixed bottom-8 left-6 opacity-85 shadow-amber-500 hover:opacity-100">
         <button onClick={scrollToTop}>
-          <div className="bg-blue-600 opacity-85 shadow-blue-600 xl:p-2 rounded-xl px-2 py-6  hover:opacity-100">
+          <div className="bg-amber-600 opacity-85 shadow-amber-600 xl:p-2 rounded-3xl px-2 py-6  hover:opacity-100">
             <FaArrowUp className="text-white xl:w-6 xl:h-20 w-4 h-8" />
           </div>
         </button>
       </div>
       <div className="z-50 fixed bottom-10 right-6 opacity-85 shadow-emerald-200 hover:opacity-100">
         <Link to="">
-          {/* <img src={wa} alt="WhatsApp Logo" className="w-16 h-16 xl:w-20 xl:h-20" /> */}
+          <FaWhatsapp className="w-12 h-12 xl:w-16 xl:h-16 text-green-600" />
         </Link>
       </div>
     </>
