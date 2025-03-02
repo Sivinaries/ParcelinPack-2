@@ -17,7 +17,7 @@ export default function Mitra() {
             Parcelinpack, Protect your Brand
           </h1>
           <Link
-            href="#contact"
+            to="/contact"
             className="bg-[#FD9F59] hover:bg-[#f8944a] text-white font-medium px-6 py-3 rounded-full transition-colors"
           >
             Mari bermitra

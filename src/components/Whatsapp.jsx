@@ -17,7 +17,9 @@ function Whatsapp() {
         </button>
       </div>
       <div className="z-50 fixed bottom-10 right-6 opacity-85 shadow-emerald-200 hover:opacity-100">
-        <Link to="https://warotator.parcelinpack.id/organik-website-5">
+        <Link 
+        target="blank"
+        to="https://warotator.parcelinpack.id/organik-website-5">
           <FaWhatsapp className="w-12 h-12 xl:w-16 xl:h-16 text-green-600" />
         </Link>
       </div>
