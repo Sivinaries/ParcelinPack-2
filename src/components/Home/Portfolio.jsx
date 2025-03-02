@@ -1,5 +1,6 @@
 import model from "../../assets/images/portofolio/model.png";
 import hampers from "../../assets/images/portofolio/hampers.jpg";
+import { Link } from "react-router-dom";
 
 function Portfolio() {
   return (
@@ -11,7 +12,15 @@ function Portfolio() {
               <h1 className="text-4xl md:text-5xl md:tracking-tighter md:leading-normal">
                 Kami Membuat Packaging yang Menceritakan Kisah yang Layak Dibagikan
               </h1>
-              <button className="rounded-full bg-orange-400 p-3">Lihat Portofolio</button>
+              <div className="border-2 rounded-full bg-orange-400 p-3 w-fit">
+                <Link
+                  to="portfolio"
+                  className="">
+                  <h1>
+                    Lihat Portofolio
+                  </h1>
+                </Link>
+              </div>
             </div>
           </div>
           <div className="col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-2">
@@ -20,7 +29,7 @@ function Portfolio() {
               style={{ backgroundImage: `url(${model})` }}
             >
               <div className="absolute bottom-0 font-semibold text-white text-xl p-4">
-              PR Packaging for Scarlett
+                PR Packaging for Scarlett
               </div>
             </div>
             <div

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from "react";
 import background from "../../assets/images/campaign/background.png";
+import { useNavigate } from 'react-router-dom';
 
 export default function Campaign() {
   const [timeRemaining, setTimeRemaining] = useState(24 * 60 * 60);
@@ -26,6 +27,8 @@ export default function Campaign() {
       .padStart(2, "0")}:${remainingSeconds.toString().padStart(2, "0")}`;
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="h-2/4 md:h-screen w-full p-2 md:px-16 my-6 md:py-24">
       <div
@@ -44,7 +47,9 @@ export default function Campaign() {
             <p>Keseluruh Indonesia!</p>
           </div>
           <ClockDisplay time={formatTime(timeRemaining)} />
-          <button className="text-xl bg-red-500 rounded-full px-4 py-2">
+          <button 
+            onClick={() => navigate('/contact')}
+            className="text-xl bg-red-500 rounded-full px-4 py-2">
             Langsung hubungi kami!
           </button>
         </div>
