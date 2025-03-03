@@ -33,7 +33,7 @@ function Faq() {
 
   return (
     <div className="grid grid-cols-1 h-full bg-white w-full md:mx-6">
-      <div className="my-10">
+      <div className="my-4 md:my-10">
         <div className="grid grid-cols-1 md:grid-cols-2 m-4 md:my-20 md:mx-10 md:space-x-8">
           <div className="flex items-center col-span-1">
             <div className="space-y-410">

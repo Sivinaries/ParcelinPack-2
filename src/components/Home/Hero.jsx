@@ -80,7 +80,7 @@ function Hero() {
                 alt={`Slide ${index + 1}`}
                 className="w-full h-full object-cover md:object-fill"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-black"></div>
               <div className="absolute bottom-8 px-6 text-white space-y-6">
                 <h2 className="text-4xl md:text-6xl">{slide.title}</h2>
                 <ul className="hidden md:flex gap-x-32">

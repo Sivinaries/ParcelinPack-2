@@ -7,7 +7,7 @@ const useCategory = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchUsers = async () => {
+    const fetchCategories = async () => {
       try {
         const response = await categoryService.getCategories();
         setCategories(response.data);
@@ -18,7 +18,7 @@ const useCategory = () => {
       }
     };
 
-    fetchUsers();
+    fetchCategories();
   }, []);
 
   return { categories, loading, error };

@@ -23,7 +23,7 @@ function Layanan() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
         {categories.map((category, index) => (
           <Card key={index}
-            img={`/images/${category.img}`}
+            img={`https://admin.parcelinpack.id/storage/${category.img}`}
             name={category.kategori}
             tags={[]}
             slug={category.id}

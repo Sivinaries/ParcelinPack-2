@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { FaWhatsapp } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa6";
+import wa from '/images/wa.png'
 
 function Whatsapp() {
   const scrollToTop = () => {
@@ -16,12 +16,12 @@ function Whatsapp() {
           </div>
         </button>
       </div>
-      <div className="z-50 fixed bottom-10 right-6 opacity-85 shadow-emerald-200 hover:opacity-100">
+      <div className="z-40 fixed bottom-10 right-6 opacity-85 shadow-emerald-200 hover:opacity-100">
         <Link 
         target="blank"
         to="https://warotator.parcelinpack.id/organik-website-5">
-          <FaWhatsapp className="w-12 h-12 xl:w-16 xl:h-16 text-green-600" />
-        </Link>
+          <img src={wa} alt="WhatsApp Logo" className="w-16 h-16 xl:w-20 xl:h-20" />
+          </Link>
       </div>
     </>
   );
