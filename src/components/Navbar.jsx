@@ -1,6 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import { BsX } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
@@ -162,7 +161,7 @@ export default function Navbar() {
               <Link className="flex items-center" to="/">
                 <img
                   className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
-                  src={logo}
+                  src="/logo-nav.png"
                   alt="Logo Parcelin"
                 />
                 {!isMobileView && (

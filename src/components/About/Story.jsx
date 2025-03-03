@@ -1,5 +1,4 @@
 import background from "../../assets/images/story/background.png";
-import cute from '../../assets/images/cute.png'
 
 function Story() {
   return (
@@ -12,7 +11,7 @@ function Story() {
           </div>
           <div className="md:hidden md:w-1/2 flex items-center justify-center order-1 md:order-none">
             <img
-              src={cute}
+              src="/images/cute.png"
               alt="Cerita Parcelin"
               className="w-full h-full object-cover"
             />

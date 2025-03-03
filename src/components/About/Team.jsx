@@ -1,9 +1,3 @@
-import team1 from "../../assets/images/team/team1.png";
-import team2 from "../../assets/images/team/team2.jpg";
-import team3 from "../../assets/images/team/team3.png";
-import team4 from "../../assets/images/team/team4.jpg";
-import team5 from "../../assets/images/team/team5.jpg";
-
 export default function Team() {
   return (
     <div className="flex items-center justify-center md:p-12 bg-white mx-auto w-screen-lg md:h-screen">
@@ -28,19 +22,19 @@ export default function Team() {
               <div
                 className="w-2/5 h-full bg-gray-900"
                 style={{
-                  background: `url(${team2}) no-repeat center center / cover`,
+                  background: `url(/images/team/team2.jpg) no-repeat center center / cover`,
                 }}
               ></div>
               <div
                 className="w-1/5 h-full bg-gray-900"
                 style={{
-                  background: `url(${team3}) no-repeat center center / cover`,
+                  background: `url(/images/team/team3.png) no-repeat center center / cover`,
                 }}
               ></div>
               <div
                 className="w-2/5 h-full bg-gray-900"
                 style={{
-                  background: `url(${team1}) no-repeat center center / cover`,
+                  background: `url(/images/team/team1.png) no-repeat center center / cover`,
                 }}
               ></div>
             </div>
@@ -48,13 +42,13 @@ export default function Team() {
               <div
                 className="w-2/3 h-full"
                 style={{
-                  background: `url(${team4}) no-repeat center center / cover`,
+                  background: `url(/images/team/team4.jpg) no-repeat center center / cover`,
                 }}
               ></div>
               <div
                 className="w-1/3 h-full"
                 style={{
-                  background: `url(${team5}) no-repeat center center / cover`,
+                  background: `url(/images/team/team5.jpg) no-repeat center center / cover`,
                 }}
               ></div>
             </div>
@@ -77,13 +71,13 @@ export default function Team() {
               <div
                 className="w-2/5 h-full"
                 style={{
-                  background: `url(${team2}) no-repeat center center / cover`,
+                  background: `url(/images/team/team2.jpg) no-repeat center center / cover`,
                 }}
               ></div>
               <div
                 className="w-1/5 h-full"
                 style={{
-                  background: `url(${team3}) no-repeat center center / cover`,
+                  background: `url(/images/team/team3.png) no-repeat center center / cover`,
                 }}
               ></div>
             </div>
@@ -91,13 +85,13 @@ export default function Team() {
               <div
                 className="w-2/3 h-full"
                 style={{
-                  background: `url(${team4}) no-repeat center center / cover`,
+                  background: `url(/images/team/team4.jpg) no-repeat center center / cover`,
                 }}
               ></div>
               <div
                 className="w-1/3 h-full"
                 style={{
-                  background: `url(${team5}) no-repeat center center / cover`,
+                  background: `url(/images/team/team5.jpg) no-repeat center center / cover`,
                 }}
               ></div>
             </div>
@@ -105,7 +99,7 @@ export default function Team() {
           <div
             className="w-1/4 h-full"
             style={{
-              background: `url(${team1}) no-repeat center center / cover`,
+              background: `url(/images/team/team1.png) no-repeat center center / cover`,
             }}
           ></div>
         </div>
