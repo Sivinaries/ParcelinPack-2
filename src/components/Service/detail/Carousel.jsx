@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./carousel.css";
 
-export default function Carousel({ images, path }) {
+export default function Carousel({ images }) {
   return (
     <div className="w-full h-full">
       <Swiper
@@ -26,7 +26,7 @@ export default function Carousel({ images, path }) {
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <img
-              src={`${path}${image}`}
+              src={`https://admin.parcelinpack.id/storage/${image}`}
               alt={`Slide ${index + 1}`}
               className="w-full h-full object-cover"
             />
@@ -71,5 +71,4 @@ export default function Carousel({ images, path }) {
 
 Carousel.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string).isRequired,
-  path: PropTypes.string.isRequired,
 };

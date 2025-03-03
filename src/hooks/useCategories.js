@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
-import productService from '../api/service/product.service';
+import categoryService from '../api/service/category.service';
 
-const useProduct = () => {
-  const [products, setProducts] = useState([]);
+const useCategories = () => {
+  const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await productService.getProducts();
-        setProducts(response.data);
+        const response = await categoryService.getCategories();
+        setCategories(response.data);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -21,7 +21,7 @@ const useProduct = () => {
     fetchUsers();
   }, []);
 
-  return { products, loading, error };
+  return { categories, loading, error };
 };
 
-export default useProduct;
+export default useCategories;

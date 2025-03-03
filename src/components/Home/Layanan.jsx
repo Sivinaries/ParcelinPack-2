@@ -1,33 +1,23 @@
 import { Link } from "react-router-dom";
-import lay1 from "../../assets/images/layanan/lay1.png";
-import lay2 from "../../assets/images/layanan/lay2.png";
-import lay3 from "../../assets/images/layanan/lay3.png";
-import lay4 from "../../assets/images/layanan/lay4.png";
 import { MdArrowOutward } from "react-icons/md";
+import useCategories from "../../hooks/useCategories";
 
-function Layanan() {
-  const services = [
-    {
-      text: "Kemasan Produk",
-      img: lay2,
-      link: "/product",
-    },
-    {
-      text: "Hampers & Corporate gift",
-      img: lay3,
-      link: "/hampers",
-    },
-    {
-      text: "Merchandise",
-      img: lay4,
-      link: "/merchandise",
-    },
-    {
-      text: "PR Packaging",
-      img: lay1,
-      link: "/pr-packaging",
-    },
-  ];
+export default function Layanan() {
+  const { categories, loading, error } = useCategories()
+  
+  if (loading) {
+    return <p className="text-center text-gray-600">Loading...</p>;
+  }
+
+  if (error) {
+    return <p className="text-center text-red-500">Error: {error}</p>;
+  }
+
+  if (!categories || categories.length === 0) {
+    return (
+      <p className="text-center text-gray-500">Tidak ada layanan tersedia.</p>
+    );
+  }
 
   return (
     <div className="grid grid-cols-1 h-fit bg-white">
@@ -36,12 +26,12 @@ function Layanan() {
           <h1 className="text-4xl md:text-5xl font-light">Layanan Kami</h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-0.5 md:gap-2">
-          {services.map((service, index) => (
-            <Link to={service.link} key={index} className="relative group">
-              <div className="relative">
+          {categories.map((category, index) => (
+            <Link to={category.id.toString()} key={index} className="relative group">
+              <div className="relative w-full h-[340px]">
                 <img
                   className="w-full h-60 md:h-full object-cover inset-0 rounded-3xl"
-                  src={service.img}
+                  src={`https://admin.parcelinpack.id/storage/${category.img}`}
                   alt=""
                 />
 
@@ -49,7 +39,7 @@ function Layanan() {
                   <div className="flex justify-between items-center gap-x-2">
                     <div className="shadow-xl p-1 bg-gray-700 bg-opacity-50 rounded-xl my-auto px-4">
                       <h1 className="text-white text-xl md:text-lg font-sans">
-                        {service.text}
+                        {category.kategori}
                       </h1>
                     </div>
 
@@ -66,5 +56,3 @@ function Layanan() {
     </div>
   );
 }
-
-export default Layanan;

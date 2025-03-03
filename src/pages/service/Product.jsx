@@ -1,14 +1,17 @@
 import { useState } from "react";
-import Searchbar from "../../components/Product/Searchbar";
-import Hero from "../../components/Product/Hero";
-import Card from "../../components/Card";
-import useProduct from "../../hooks/useProduct";
+import Card from "../../components/Service/Card";
+import { useParams } from "react-router-dom";
+import HeroProduct from "../../components/Service/HeroProduct";
+import Searchbar from "../../components/Service/Searchbar";
+import useCategoryById from "../../hooks/useCategoryById";
 
 export default function Product() {
   const [searchTerm, setSearchTerm] = useState("");
-  const { products, error, loading } = useProduct()
+  const { idCategory } = useParams();
 
-  const filteredProducts = products?.filter((product) =>
+  const { category, loading, error } = useCategoryById(idCategory);
+
+  const filteredProducts = category?.kategori?.products?.filter((product) =>
     product.product.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -20,13 +23,13 @@ export default function Product() {
     return <p className="text-center text-red-500">Error: {error}</p>;
   }
 
-  if (!products || products.length === 0) {
+  if (!category.kategori.products || category.kategori.products.length === 0) {
     return <p className="text-center text-gray-500">Tidak ada product tersedia.</p>;
   }
 
   return (
     <>
-      <Hero />
+      <HeroProduct title={category.kategori.kategori} desc={category.kategori.desc} />
       <div className="flex flex-col justify-center items-center p-6 sm:p-10 my-10 space-y-6">
         <div className="w-full md:w-1/2">
           <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
@@ -35,10 +38,10 @@ export default function Product() {
           {filteredProducts.map((product, index) => (
             <Card
               key={index}
-              img={`/images/${product.img}`}
+              img={`https://admin.parcelinpack.id/storage/${product.img}`}
               name={product.product}
               tags={[]}
-              slug={product.id}
+              slug={product.id.toString()}
             />
           ))}
         </div>
