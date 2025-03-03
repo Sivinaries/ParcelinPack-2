@@ -28,7 +28,7 @@ export default function Layanan() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-0.5 md:gap-2">
           {categories.map((category, index) => (
             <Link to={category.id.toString()} key={index} className="relative group">
-              <div className="relative w-full h-[340px]">
+              <div className="relative w-full h-[380px]">
                 <img
                   className="w-full h-60 md:h-full object-cover inset-0 rounded-3xl"
                   src={`https://admin.parcelinpack.id/storage/${category.img}`}
