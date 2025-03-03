@@ -1,5 +1,3 @@
-import pack from "../../assets/images/pack/pack.png"
-
 function Parcel() {
   return (
     <div className="relative grid grid-cols-1 h-fit bg-white md:px-16">
@@ -23,7 +21,7 @@ function Parcel() {
       </div>
       <div className="absolute inset-0 flex items-end md:items-center justify-center">
         <img
-          src={pack}
+          src="/images/pack.png"
           alt="Parcel"
           className="max-w-[40%] md:max-w-[80%] max-h-[40%] md:max-h-[80%] object-contain z-0 -ml-44 mb-8 md:-mb-24 md:-ml-[400px]"
         />

@@ -1,4 +1,3 @@
-import background from "../../assets/images/quote/background.png";
 import { RiDoubleQuotesL } from "react-icons/ri";
 
 function QuoteSection() {
@@ -23,7 +22,7 @@ function QuoteSection() {
 
         <div className="absolute top-0 right-0 md:right-20 rounded-lg h-32 w-32 md:h-64 md:w-64 z-0">
           <img
-            src={background}
+            src='/images/quote/background.png'
             alt="Blue cosmetic packaging with beauty products"
             className="w-full h-full object-cover rounded-lg opacity-80"
           />
