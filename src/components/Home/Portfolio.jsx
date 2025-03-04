@@ -13,14 +13,14 @@ function Portfolio() {
               <h1 className="text-4xl md:text-5xl md:tracking-tighter md:leading-normal">
                 Kami Membuat Packaging yang Menceritakan Kisah yang Layak Dibagikan
               </h1>
-              <div className="rounded-full bg-orange-400 p-3 w-fit">
+              <div className="rounded-full bg-orange-500 p-2 w-fit">
                 <Link
                   to="portfolio"
                   className="flex justify-between">
-                  <h1>
-                    Lihat Portofolio 
+                  <h1 className="text-white hover:underline transition-all duration-100 delay-100 text-center md:text-xl px-2 md:px-4 font-bold">
+                    Lihat Portofolio
                   </h1>
-                  <LuArrowUpRight className="" size={24} />
+                  <LuArrowUpRight className="text-white my-auto" size={24} />
                 </Link>
               </div>
             </div>

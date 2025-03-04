@@ -120,9 +120,9 @@ export default function Navbar () {
 
     const contactButton = useMemo(() => (
         <div className='hidden lg:flex'>
-            <div className="p-2 hover:scale-110 rounded-3xl duration-200 delay-150 border-2 bg-orange-500">
+            <div className="p-2 rounded-full bg-orange-500">
                 <Link 
-                    className="text-black hover:underline delay-100 text-center px-3 lg:px-4 text-sm lg:text-base xl:text-lg font-semibold" 
+                    className="text-white hover:underline transition-all duration-100 delay-100 text-center md:text-xl px-2 md:px-4 font-bold" 
                     to="/contact"
                 >
                     Hubungi Kami
@@ -158,7 +158,7 @@ export default function Navbar () {
 
                         <div className='flex gap-x-2'>
                             {isMobileView && (
-                                <Link to="/contact" className='border border-black p-2 rounded-full'>Hubungi Kami</Link>
+                                <Link to="/contact" className='p-2 rounded-full bg-orange-500 text-white hover:underline transition-all duration-100 delay-100 text-center md:text-xl px-2 md:px-4 font-bold'>Hubungi Kami</Link>
                             )}
                             
                             {isMobileView ? (

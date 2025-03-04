@@ -9,8 +9,8 @@ import Story from "../components/About/Story";
 import Team from "../components/About/Team";
 import QuoteSection from "../components/About/Quote";
 import Footer from "../components/Footer";
-import Campaign from "../components/Home/Campaign";
 import { motion } from "framer-motion";
+import Packaging from "../components/Home/Packaging";
 
 function About() {
 
@@ -37,9 +37,7 @@ function About() {
           <Exp />
         </motion.div>
         <motion.div {...MotionSlideUp}>
-          <div className="md:hidden">
-            <Campaign />
-          </div>
+            <Packaging />
         </motion.div>
         <motion.div {...MotionSlideUp}>
           <Team />

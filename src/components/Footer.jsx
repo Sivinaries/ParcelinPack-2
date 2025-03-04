@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaInstagram, FaFacebookSquare, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -13,9 +14,9 @@ const Footer = () => {
       />
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 md:justify-items-center ps-6 md:ps-0 my-2 gap-y-6">
         <div className="col-span-1 md:col-span-4 space-y-4">
-          <h6 className="font-bold">Parcelin Company</h6>
+          <h6 className="font-bold">PT Parcelin Creative Indonesia</h6>
           <p className="text-sm">
-            ©️ 2025 Parcelin Company. All rights reserved
+            ©️ 2025 Parcelin Creative. All rights reserved
           </p>
         </div>
         <div className="col-span-1 md:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-6">
@@ -81,18 +82,17 @@ const Footer = () => {
           </div>
           <div className="col-span-1 space-y-4">
             <h6 className="font-bold">Ikuti Kami</h6>
-            <ul className="text-sm space-y-2 text-slate-400">
-              <li>
-                <Link to={"https://warotator.parcelinpack.id/organik-fanpage-fb"}>
-                  Facebook
-                </Link>
-              </li>
-              <li>
-                <Link to={"https://warotator.parcelinpack.id/organik-instagram"}>
-                  Instagram
-                </Link>
-              </li>
-            </ul>
+            <div className='flex gap-4 xl:gap-8'>
+              <a href="https://www.instagram.com/parcelinpack/">
+                <FaInstagram className='text-white w-8 h-8' />
+              </a>
+              <a href="">
+                <FaFacebookSquare className='text-white w-8 h-8' />
+              </a>
+              <a href="https://www.tiktok.com/@parcelincompany">
+                <FaTiktok className='text-white w-8 h-8' />
+              </a>
+            </div>
           </div>
         </div>
       </div>
