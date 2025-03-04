@@ -1,5 +1,5 @@
 import useProject from "../../hooks/useProject";
-import Card from "../Card";
+import Card from "../Service/Card";
 
 function Project() {
   const { projects, error, loading } = useProject()

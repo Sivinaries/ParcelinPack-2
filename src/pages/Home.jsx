@@ -12,9 +12,9 @@ import Portfolio from '../components/Home/Portfolio'
 import Review from '../components/Home/Review'
 import Faq from '../components/Home/Faq'
 import Promote from '../components/Promote'
-import Campaign from '../components/Home/Campaign'
 import Footer from '../components/Footer'
 import { motion } from 'framer-motion'
+import Packaging from '../components/Home/Packaging'
 
 function Home() {
 
@@ -50,13 +50,13 @@ function Home() {
                     <Exp />
                 </motion.div>
                 <motion.div {...MotionSlideUp}>
+                    <Packaging />
+                </motion.div>
+                <motion.div {...MotionSlideUp}>
                     <Why />
                 </motion.div>
                 <motion.div {...MotionSlideUp}>
                     <Portfolio />
-                </motion.div>
-                <motion.div {...MotionSlideUp}>
-                    <Campaign />
                 </motion.div>
                 <motion.div {...MotionSlideUp}>
                     <Review />

@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
 import subProductService from '../api/service/subProduct.service';
 
-const useSubProduct = () => {
-  const [subProducts, setSubProducts] = useState([]);
+const useSubProductById = (id) => {
+  const [subProduct, setSubProduct] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchUsers = async () => {
+    const fetchSubproduct = async () => {
       try {
-        const response = await subProductService.getSubProducts();
-        setSubProducts(response.data);
+        const response = await subProductService.getSubProductById(id);
+        setSubProduct(response.data);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -18,10 +18,10 @@ const useSubProduct = () => {
       }
     };
 
-    fetchUsers();
-  }, []);
+    fetchSubproduct();
+  }, [id]);
 
-  return { subProducts, loading, error };
+  return { subProduct, loading, error };
 };
 
-export default useSubProduct;
+export default useSubProductById;

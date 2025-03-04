@@ -16,7 +16,7 @@ function Hero() {
     {
       image: "hero2.png",
       title: "Merchandise for Brand",
-      products: ["Hardbox", "Hampers", "Marchandise"],
+      products: ["Hardbox", "Hampers", "Merchandise"],
     },
     {
       image: "hero3.png",
@@ -82,10 +82,10 @@ function Hero() {
               />
               <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-black"></div>
               <div className="absolute bottom-8 px-6 text-white space-y-6">
-                <h2 className="text-4xl md:text-6xl">{slide.title}</h2>
+                <h2 className="text-4xl md:text-6xl hover:underline transition-all duration-100 delay-100">{slide.title}</h2>
                 <ul className="hidden md:flex gap-x-32">
                   {slide.products.map((product, i) => (
-                    <li key={i} className="text-2xl">
+                    <li key={i} className="text-2xl hover:underline transition-all duration-100 delay-100">
                       {product}
                     </li>
                   ))}

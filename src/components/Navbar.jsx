@@ -120,9 +120,9 @@ export default function Navbar () {
 
     const contactButton = useMemo(() => (
         <div className='hidden lg:flex'>
-            <div className="p-2 hover:scale-110 rounded-3xl duration-200 delay-150 border-2 border-black">
+            <div className="p-2 hover:scale-110 rounded-3xl duration-200 delay-150 border-2 bg-orange-500">
                 <Link 
-                    className="text-black text-center px-3 lg:px-4 text-sm lg:text-base xl:text-lg font-semibold" 
+                    className="text-black hover:underline delay-100 text-center px-3 lg:px-4 text-sm lg:text-base xl:text-lg font-semibold" 
                     to="/contact"
                 >
                     Hubungi Kami
@@ -201,12 +201,6 @@ export default function Navbar () {
                                 animate="visible"
                                 exit="exit"
                             >
-                                {/* <div className="flex justify-between w-full p-4 bg-white">
-                                    <img src="/images/logo.png" alt="" className='h-8 w-8' />
-                                    <div className="flex items-center gap-x-2">
-                                        <BsX size={42} onClick={toggleModal} />
-                                    </div>
-                                </div> */}
                                 <motion.div
                                     className="relative h-full w-full py-4 px-2 bg-white opacity-80"
                                     variants={navLinksVariants}

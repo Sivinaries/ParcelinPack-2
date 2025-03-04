@@ -7,7 +7,7 @@ const useProduct = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchUsers = async () => {
+    const fetchProducts = async () => {
       try {
         const response = await productService.getProducts();
         setProducts(response.data);
@@ -18,7 +18,7 @@ const useProduct = () => {
       }
     };
 
-    fetchUsers();
+    fetchProducts();
   }, []);
 
   return { products, loading, error };

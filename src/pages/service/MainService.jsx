@@ -1,8 +1,9 @@
+
 import { Outlet } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-function Main() {
+export default function MainService() {
     return (
         <main className='flex flex-col'>
             <Navbar />
@@ -13,5 +14,3 @@ function Main() {
         </main>
     )
 }
-
-export default Main;

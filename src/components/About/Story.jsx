@@ -10,13 +10,6 @@ function Story() {
           <h1 className="text-7xl md:text-8xl font-base">Cerita</h1>
           <h1 className="text-7xl md:text-8xl font-base">Parcelin</h1>
           </div>
-          <div className="md:hidden md:w-1/2 flex items-center justify-center order-1 md:order-none">
-            <img
-              src={cute}
-              alt="Cerita Parcelin"
-              className="w-full h-full object-cover"
-            />
-          </div>
           <div className="order-3 space-y-4 md:order-none">
           <p className="text-base md:text-2xl leading-relaxed">
             PT Parcelin Creative Indonesia, atau yang lebih dikenal sebagai
@@ -38,7 +31,7 @@ function Story() {
           </div>
         </div>
 
-        <div className="hidden md:w-1/2 md:flex items-center justify-center relative">
+        <div className="md:w-1/2 md:flex items-center justify-center relative">
           <img
             src={background}
             alt="Cerita Parcelin"
