@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import icon from "../assets/images/promote/icon.png";
+import { useNavigate } from 'react-router-dom';
 
 function Section({ children, className }) {
+
   return (
     <div className={`relative bg-[#AB6029] ${className}`}>
       {children}
@@ -15,8 +17,11 @@ Section.propTypes = {
 };
 
 export default function Promote() {
+
+  const navigate = useNavigate();
+
   return (
-    <div className="relative grid place-items-center h-full w-full px-4 my-28">
+    <div className="relative grid place-items-center h-full w-full px-4 my-8">
       <div className="hidden md:grid relative w-full grid-cols-5">
         <img src={"/images/promote/bg-vector.png"} alt="Wood Texture" className="absolute h-full object-fill w-full z-10" />
         <Section className="rounded-l-xl" />
@@ -25,7 +30,9 @@ export default function Promote() {
             <h1 className="text-4xl text-white font-medium">
               Tunggu apalagi, Yuk hubungi kami sekarang!
             </h1>
-            <button className="bg-[#FD9F59] text-2xl text-white font-extrabold rounded-full p-4 w-1/3">
+            <button
+              onClick={() => navigate('/contact')}
+              className="bg-[#FD9F59] text-2xl text-white font-extrabold rounded-full p-4 w-1/3 relative z-40">
               Hubungi Kami
             </button>
           </div>
@@ -50,7 +57,9 @@ export default function Promote() {
           <h1 className="text-2xl text-white font-bold">
             kami sekarang!
           </h1>
-          <button className="bg-[#FD9F59] text-xl text-white font-extrabold rounded-full p-2.5 mt-4 w-1/2">
+          <button
+            onClick={() => navigate('/contact')}
+            className="bg-[#FD9F59] text-xl text-white font-extrabold rounded-full p-2.5 mt-4 w-1/2 relative z-40">
             Hubungi Kami
           </button>
         </Section>

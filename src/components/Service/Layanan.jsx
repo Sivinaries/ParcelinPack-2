@@ -1,16 +1,16 @@
-import services from "../../data/services"
-import Card from "../Card";
+import Card from "./Card";
+import PropTypes from "prop-types";
 
-function Layanan() {
+export default function Layanan({ categories }) {
   return (
     <div className="p-6 sm:p-10">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
-        {services.map((service, index) => (
-          <Card key={index}
-            img={`/images/service/${service.img}`}
-            name={service.text}
-            tags={service.tags}
-            slug={service.link}
+        {categories.map((category, index) => (
+          <Card
+            key={index}
+            img={`https://admin.parcelinpack.id/storage/${category.img}`}
+            name={category.kategori}
+            slug={category.id.toString()}
           />
         ))}
       </div>
@@ -18,4 +18,11 @@ function Layanan() {
   );
 }
 
-export default Layanan;
+Layanan.propTypes = {
+  categories: PropTypes.arrayOf(
+    PropTypes.shape({
+      img: PropTypes.string.isRequired,
+      kategori: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};

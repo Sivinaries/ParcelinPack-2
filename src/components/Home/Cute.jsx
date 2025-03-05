@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import cute from '../../assets/images/cute.png'
 import { LuArrowUpRight } from 'react-icons/lu'
 
@@ -12,12 +13,13 @@ function Cute() {
                         >
                             Temukan kebutuhan packaging untuk berbagai industri di Parcelinpack. Buat kemasan menarik, dan tingkatkan value bisnismu.</h1>
                     </div>
-                    <div className="p-2 md:p-3 bg-orange-500 w-1/2 md:w-1/4 rounded-full md:order-none order-1">
-                        <a href="">
-                            <h1 className="flex items-center justify-between p-2 text-white text-center text-lg md:text-xl">
-                                Lihat Produk <LuArrowUpRight className="md:hidden" size={24} />
+                    <div className="p-2 bg-orange-500 w-fit rounded-full md:order-none order-1">
+                        <Link className='flex' to="/service">
+                            <h1 className="text-white hover:underline transition-all duration-100 delay-100 text-center md:text-xl px-2 md:px-4 font-bold">
+                                Lihat Produk
                             </h1>
-                        </a>
+                            <LuArrowUpRight className="text-white my-auto" size={24} />
+                        </Link>
                     </div>
                 </div>
                 <div>

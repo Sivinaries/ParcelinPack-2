@@ -1,5 +1,7 @@
 import model from "../../assets/images/portofolio/model.png";
 import hampers from "../../assets/images/portofolio/hampers.jpg";
+import { Link } from "react-router-dom";
+import { LuArrowUpRight } from 'react-icons/lu'
 
 function Portfolio() {
   return (
@@ -11,7 +13,16 @@ function Portfolio() {
               <h1 className="text-4xl md:text-5xl md:tracking-tighter md:leading-normal">
                 Kami Membuat Packaging yang Menceritakan Kisah yang Layak Dibagikan
               </h1>
-              <button className="rounded-full bg-orange-400 p-3">Lihat Portofolio</button>
+              <div className="rounded-full bg-orange-500 p-2 w-fit">
+                <Link
+                  to="portfolio"
+                  className="flex justify-between">
+                  <h1 className="text-white hover:underline transition-all duration-100 delay-100 text-center md:text-xl px-2 md:px-4 font-bold">
+                    Lihat Portofolio
+                  </h1>
+                  <LuArrowUpRight className="text-white my-auto" size={24} />
+                </Link>
+              </div>
             </div>
           </div>
           <div className="col-span-1 md:col-span-3 grid grid-cols-1 md:grid-cols-2">
@@ -20,7 +31,7 @@ function Portfolio() {
               style={{ backgroundImage: `url(${model})` }}
             >
               <div className="absolute bottom-0 font-semibold text-white text-xl p-4">
-              PR Packaging for Scarlett
+                PR Packaging for Scarlett
               </div>
             </div>
             <div

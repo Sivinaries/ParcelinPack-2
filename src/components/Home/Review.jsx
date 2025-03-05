@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Scrollbar } from "swiper/modules";
 import "swiper/css";
@@ -8,6 +9,34 @@ import "./custom-scrollbar.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export default function Review() {
+  const videoRef = useRef(null); // Gunakan useRef untuk menangani video
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+
+    if (!videoElement) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            videoElement.play();
+          } else {
+            videoElement.pause();
+            videoElement.currentTime = 0; // Reset waktu jika keluar viewport
+          }
+        });
+      },
+      { threshold: 0.5 } // Mulai ketika 50% video terlihat
+    );
+
+    observer.observe(videoElement);
+
+    return () => {
+      observer.unobserve(videoElement);
+    };
+  }, []);
+
   const reviews = [
     { src: "/images/review/review1.png", alt: "Review 1" },
     { src: "/images/review/review2.png", alt: "Review 2" },
@@ -26,9 +55,9 @@ export default function Review() {
         </p>
         <div className="flex justify-center">
           <video
+            ref={videoRef} // Tambahkan ref ke video
             className="rounded-xl border shadow-sm w-3/4 md:w-1/3 aspect-video"
             controls
-            autoPlay
           >
             <source src="/videos/testimoni.mp4" type="video/mp4" />
             Browser Anda tidak mendukung tag video.
@@ -45,8 +74,8 @@ export default function Review() {
               hide: false,
             }}
             navigation={{
-              nextEl: '.review-custom-swiper-button-next',
-              prevEl: '.review-custom-swiper-button-prev',
+              nextEl: ".review-custom-swiper-button-next",
+              prevEl: ".review-custom-swiper-button-prev",
             }}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             loop
