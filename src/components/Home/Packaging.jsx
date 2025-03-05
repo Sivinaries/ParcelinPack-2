@@ -29,69 +29,69 @@ function Packaging() {
                         </div>
                         <div className="my-auto">
                             <div className="grid grid-cols-1 w-full max-w-fit bg-orange-400 bg-opacity-80 rounded-full z-30">
-                                <div className="h-full flex justify-between">
+                                <div className="h-full flex justify-center">
                                     <Slider className="w-full h-full" {...settings}>
-                                        <div className="h-full flex justify-between min-h-[24px] md:min-h-[100px]">
+                                        <div className="h-full w-fit flex justify-center min-h-[24px] md:min-h-[100px]">
                                             <h1 className="text-[13px] md:text-[70px] font-extralight text-black flex items-center">
                                                 Fashion
                                                 <img src={star} alt="Running Star" className="ml-3 md:ml-6 mr-3 md:mr-6 h-4 xl:h-10" />
                                             </h1>
                                         </div>
-                                        <div className="h-full flex justify-between min-h-[24px] md:min-h-[100px]">
+                                        <div className="h-full flex justify-center min-h-[24px] md:min-h-[100px]">
                                             <h1 className="text-[13px] md:text-[70px] font-extralight text-black flex items-center">
                                                 Skincare
                                                 <img src={star} alt="Running Star" className="ml-3 md:ml-6 mr-3 md:mr-6 h-4 xl:h-10" />
                                             </h1>
                                         </div>
-                                        <div className="h-full flex justify-between min-h-[24px] md:min-h-[100px]">
+                                        <div className="h-full flex justify-center min-h-[24px] md:min-h-[100px]">
                                             <h1 className="text-[13px] md:text-[70px] font-extralight text-black flex items-center">
-                                                Make-Up
+                                                MakeUp
                                                 <img src={star} alt="Running Star" className="ml-3 md:ml-6 mr-3 md:mr-6 h-4 xl:h-10" />
                                             </h1>
                                         </div>
-                                        <div className="h-full flex justify-between min-h-[24px] md:min-h-[100px]">
+                                        <div className="h-full flex justify-center min-h-[24px] md:min-h-[100px]">
                                             <h1 className="text-[13px] md:text-[70px] font-extralight text-black flex items-center">
                                                 Parfum
                                                 <img src={star} alt="Running Star" className="ml-3 md:ml-6 mr-3 md:mr-6 h-4 xl:h-10" />
                                             </h1>
                                         </div>
-                                        <div className="h-full flex justify-between min-h-[24px] md:min-h-[100px]">
+                                        <div className="h-full flex justify-center min-h-[24px] md:min-h-[100px]">
                                             <h1 className="text-[13px] md:text-[70px] font-extralight text-black flex items-center">
                                                 Makanan
                                                 <img src={star} alt="Running Star" className="ml-3 md:ml-6 mr-3 md:mr-6 h-4 xl:h-10" />
                                             </h1>
                                         </div>
-                                        <div className="h-full flex justify-between min-h-[24px] md:min-h-[100px]">
+                                        <div className="h-full flex justify-center min-h-[24px] md:min-h-[100px]">
                                             <h1 className="text-[13px] md:text-[70px] font-extralight text-black flex items-center">
                                                 Minuman
                                                 <img src={star} alt="Running Star" className="ml-3 md:ml-6 mr-3 md:mr-6 h-4 xl:h-10" />
                                             </h1>
                                         </div>
-                                        <div className="h-full flex justify-between min-h-[24px] md:min-h-[100px]">
+                                        <div className="h-full flex justify-center min-h-[24px] md:min-h-[100px]">
                                             <h1 className="text-[13px] md:text-[70px] font-extralight text-black flex items-center">
                                                 Hijab
                                                 <img src={star} alt="Running Star" className="ml-3 md:ml-6 mr-3 md:mr-6 h-4 xl:h-10" />
                                             </h1>
                                         </div>
-                                        <div className="h-full flex justify-between min-h-[24px] md:min-h-[100px]">
+                                        <div className="h-full flex justify-center min-h-[24px] md:min-h-[100px]">
                                             <h1 className="text-[13px] md:text-[70px] font-extralight text-black flex items-center">
                                                 Elektronik
                                                 <img src={star} alt="Running Star" className="ml-3 md:ml-6 mr-3 md:mr-6 h-4 xl:h-10" />
                                             </h1>
                                         </div>
-                                        <div className="h-full flex justify-between min-h-[24px] md:min-h-[100px]">
+                                        <div className="h-full flex justify-center min-h-[24px] md:min-h-[100px]">
                                             <h1 className="text-[13px] md:text-[70px] font-extralight text-black flex items-center">
                                                 Aksesoris
                                                 <img src={star} alt="Running Star" className="ml-3 md:ml-6 mr-3 md:mr-6 h-4 xl:h-10" />
                                             </h1>
                                         </div>
-                                        <div className="h-full flex justify-between min-h-[24px] md:min-h-[100px]">
+                                        <div className="h-full flex justify-center min-h-[24px] md:min-h-[100px]">
                                             <h1 className="text-[13px] md:text-[70px] font-extralight text-black flex items-center">
                                                 Perhiasan
                                                 <img src={star} alt="Running Star" className="ml-3 md:ml-6 mr-3 md:mr-6 h-4 xl:h-10" />
                                             </h1>
                                         </div>
-                                        <div className="h-full flex justify-between min-h-[24px] md:min-h-[100px]">
+                                        <div className="h-full flex justify-center min-h-[24px] md:min-h-[100px]">
                                             <h1 className="text-[13px] md:text-[70px] font-extralight text-black flex items-center">
                                                 Event
                                                 <img src={star} alt="Running Star" className="ml-3 md:ml-6 mr-3 md:mr-6 h-4 xl:h-10" />
