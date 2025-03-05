@@ -8,6 +8,7 @@ import MainService from "./pages/service/MainService";
 import Product from "./pages/service/Product";
 import SubProduct from "./pages/service/SubProduct";
 import Detail from "./pages/service/Detail";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           </Route>
         </Route>
       </Route>
+      <Route path="/blog" element={<Blog />} />
       <Route path="/portfolio" element={<Porto />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<h1>404 Not Found</h1>} />

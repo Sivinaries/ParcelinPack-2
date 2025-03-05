@@ -17,6 +17,7 @@ export default function Navbar () {
         { title: 'Tentang Kami', to: '/about' },
         { title: 'Layanan Kami', to: '/service' },
         { title: "Kemasan Produk", to: "/service/6" },
+        { title: 'Blog', to: '/blog' },
         { title: 'Portofolio', to: '/portfolio' },
     ], []);
 
