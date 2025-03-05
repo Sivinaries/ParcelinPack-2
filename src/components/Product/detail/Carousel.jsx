@@ -28,7 +28,7 @@ export default function Carousel({ images, path }) {
             <img
               src={`https://admin.parcelinpack.id/storage/${image}`}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-xl"
             />
           </SwiperSlide>
         ))}
