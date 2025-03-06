@@ -24,12 +24,20 @@ export default function Product() {
   }
 
   if (!category.kategori.products || category.kategori.products.length === 0) {
-    return <p className="text-center text-gray-500">Tidak ada product tersedia.</p>;
+    return (
+      <p className="text-center text-gray-500">Tidak ada product tersedia.</p>
+    );
   }
+
+  console.log(category);
 
   return (
     <>
-      <HeroProduct title={category.kategori.kategori} desc={category.kategori.desc} />
+      <HeroProduct
+        title={category.kategori.kategori}
+        desc={category.kategori.desc}
+        img={category.kategori.img}
+      />
       <div className="flex flex-col justify-center items-center p-6 sm:p-10 my-10 space-y-6">
         <div className="w-full md:w-1/2">
           <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
